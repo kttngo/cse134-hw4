@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact me if you have any questions">
+  <title>Contact</title>
+  <link rel="icon" href="images/user-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <p><a href="index.html">Main Page</a></p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="experiments.html">HTML Experimental Page</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact</h1>
+
+    <section>
+      <h2>Send a Message</h2>
+      <form>
+        <fieldset>
+          <legend>Info</legend>
+          <p>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </p>
+          <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </p>
+          <p>
+            <label for="company">Company</label><br>
+            <input type="text" id="company" name="company" autocomplete="organization">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Reason</legend>
+          <p>
+            <input type="radio" id="reason-job" name="reason" value="job" checked>
+            <label for="reason-job">Job or internship opportunity</label>
+          </p>
+          <p>
+            <input type="radio" id="reason-collab" name="reason" value="collaboration">
+            <label for="reason-collab">Project collaboration</label>
+          </p>
+          <p>
+            <input type="radio" id="reason-other" name="reason" value="other">
+            <label for="reason-other">Something else</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Message</legend>
+          <p>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+          </p>
+          <p>
+            <input type="checkbox" id="copy" name="copy" value="yes">
+            <label for="copy">Send a copy</label>
+          </p>
+        </fieldset>
+
+        <p><button type="submit">Submit</button></p>
+      </form>
+    </section>
+    <hello-world></hello-world>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Katie Ngo.</p>
+    <p><a href="index.html">Back to home</a></p>
+  </footer>
+</body>
+</html>

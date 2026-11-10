@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects by Katie Ngo">
+  <title>Projects</title>
+  <link rel="icon" href="images/user-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <p><a href="index.html">Main Page</a></p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="experiments.html">HTML Experimental Page</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Projects</h1>
+    <p>
+      Each project below contains what I worked on, the solution to the problem, and future work.
+    </p>
+
+    <project-card>
+      <article id="project-one">
+        <h2>Manta Issue Tracker</h2>
+        <p><b>Role:</b> Frontend & Documentation | <b>Stack:</b> JavaScript | <b>Timeline:</b> 6 weeks</p>
+        <p>
+          <a href="https://github.com/cse110-sp26-group03/group03-AI-Slot-Machine">GitHub Link</a>
+        </p>
+        <img src="images/manta.png" alt="Image of basic Manta commands" width="700" height="350">
+
+        <section>
+          <h3>About</h3>
+          <p>I took CSE 110 during spring quarter and our group was tasked with creating an issue tracker. </p>
+        </section>
+
+        <section>
+          <h3>My Role</h3>
+          <ol>
+            <li>Researched popular issue trackers and their features</li>
+            <li>Implemented the display command</li>
+            <li>Tested backend code to ensure smooth performance</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Result</h3>
+          <p>We developed a CLI issue tracker that assists developers organizing their workflows and projects. It also works expectionally well with agents.</p>
+        </section>
+
+        <button type="button">View more details</button>
+      </article>
+    </project-card>
+
+    <project-card>
+      <article id="project-two">
+        <h2>Modeling Reddit Post Popularity</h2>
+        <p><b>Role:</b> Team Lead | <b>Stack:</b> Python | <b>Timeline:</b> 5 weeks</p>
+        <img src="images/reddit.png" alt="Image of our project video showcase" width="700" height="350">
+
+        <section>
+          <h3>About</h3>
+          <p>We were interested in how Reddit's top feed worked and how popularity was calculated based upon thousands of threads.</p>
+        </section>
+
+        <section>
+          <h3>Role</h3>
+          <p>I found different types of datasets about Reddit posts and made sure they were appropriate for our study. I created baselines and trained the data on various models for evaluation.</p>
+        </section>
+
+        <section>
+          <h3>Result</h3>
+          <p>There were different findings to previous work. Our choice to apply a log transformation when training predictive model created a more stable model.</p>
+        </section>
+
+        <button type="button">View more details</button>
+      </article>
+    </project-card>
+
+    <hello-world></hello-world>
+
+    <dialog id="details-dialog">
+      <h2>Technical Details</h2>
+      <p>Additional notes</p>
+      <button type="button">Close</button>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Katie Ngo.</p>
+    <address>
+      <a href="mailto:katieeengooo@gmail.com">Email</a><br>
+      <a href="https://github.com/kttngo">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/katieengo">LinkedIn</a>
+    </address>
+    <p><a href="index.html">Back to home</a></p>
+  </footer>
+</body>
+</html>

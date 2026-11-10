@@ -1,0 +1,129 @@
+/* Name: Katie Ngo
+   Repo URL: https://github.com/kttngo/cse134-hw3
+*/
+
+html {
+    background-color: #eac25c;
+}
+
+body {
+    font-family: Arial, Helvetica, san-serif;
+    color: #3b2a1a;
+    line-height: 1.5;
+
+    background-color: #fffaf0;
+    border: 2px solid #111111;
+    border-radius: 15px;
+
+    max-width: 40rem;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 0 0 0.25rem;
+    letter-spacing: 0.01em;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+/* - Cascade -
+    The h1 selector has two rules with the same color property. Since they both have equal specificity, the cascade falls back to the source.
+    The rule that appears the latest in the stylesheet overrules. This means that the blue color is applied instead of green.
+*/
+
+h1 {
+    color: #00ff2f;
+}
+
+h1 {
+    color: #001eff;
+}
+
+header {
+    border-bottom: 3px dotted #f0b429;
+    margin-bottom: 1.5rem;
+}
+
+header p {
+    margin-top: 0;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+body > footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 3px dotted #f0b429;
+    font-size: 0.9 rem;
+    text-align: center;
+}
+
+.latin {
+    font-style: italic;
+}
+
+#warning {
+    background-color: #e98989;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+}
+
+blockquote {
+  margin: 1.5rem 2rem;              
+  padding: 1rem 1.5rem;             
+  border: 2px solid #d29a16;        
+  border-radius: 10px;
+  background-color: #fbf0d3;
+  font-size: 1.15rem;
+}
+
+blockquote p {
+  margin: 0 0 0.5rem;
+  font-style: italic;
+}
+
+blockquote footer {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+dt {
+    font-weight: bold;
+    color: #cd8842;
+    margin-top: 0.7rem;
+}
+
+dd {
+  margin-left: 1.3rem;
+}
+
+a {
+  color: #c21a1a;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #3724c7;
+  background-color: #45d464;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+
+a:focus,
+input:focus,
+button:focus {
+  outline: 3px solid #0700da;
+  outline-offset: 3px;
+}
+
+input[type="text"]:focus {
+  border-color: #0010ec;
+  background-color: #fffbe8;
+}
