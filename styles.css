@@ -194,6 +194,86 @@ input[type="checkbox"] {
   accent-color: var(--color-accent);
 }
 
+/* HW 4 part 1: contact form */
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 36rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid var(--color-border);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-weight: bold;
+}
+
+.form-hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color:#3d4c70;
+}
+
+.form-instructions {
+  margin: 0;
+}
+
+.required-marker {
+  font-weight: normal;
+  color: var(--color-border);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  padding-right: 2.5rem;
+  color: var(--color-text);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 1.25rem;
+  border: 2px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  background-position: right 0.6rem top 0.6rem;
+}
+
+.contact-form input:user-invalid,
+.contact-form textarea:user-invalid {
+  border-color: #ad0222;
+  background-color: #fff4f5;
+}
+
+.contact-form input:user-valid,
+.contact-form textarea:user-valid  {
+  border-color: #1b7c37;
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible,
+.contact-form button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 footer {
   margin-top: 2rem;
   border-top: 2px solid var(--color-border);
