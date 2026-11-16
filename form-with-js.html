@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Form for Katie Ngo that uses JS">
+    <title>Contact Form</title>
+    <link rel="icon" href="images/user-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="form.js" defer></script>
+    <script src="theme.js"></script>
+</head>
+<body>
+    <header>
+        <p><a href="index.html">Katie Ngo</a></p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="form-no-js.html">Contact Form - No JS</a></li>
+                <li><a href="form-with-js.html" aria-current="page">Contact Form - JS</a></li>
+                <li><a href="experiments.html">HTML Experimental Page</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="theme-toggle" class="theme-toggle" hidden>Switch to dark theme</button>
+    </header>
+    
+    <main>
+        <h1>Contact Me</h1>
+        <p>Questions? Send me a message below.</p>
+
+        <form id="contact-form" class="contact-form" action="https://httpbin.org/post" method="post">
+            <p class="form-instructions">All fields are required. If a field has an error, there is a red border and a warning icon.</p>
+            <div class="form-field">
+                <label for="name">Name <span class="required-marker">(required)</span></label>
+                <p id="name-hint" class="form-hint">1 to 100 characters. Can include accents, apostrophes, and hyphens.</p>
+                <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-hint" required minlength="1" maxlength="100">
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email <span class="required-marker">(required)</span></label>
+                <p id="email-hint" class="form-hint">Use an address where I can reply to you, for example: name@example.com</p>
+                <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint" required>
+            </div>
+
+            <div class="form-field">
+                <label for="comments">Comments <span class="required-marker">(required)</span></label>
+                <p id="comments-hint" class="form-hint">10 to 1,000 characters</p>
+                <textarea id="comments" name="comments" rows="6" aria-describedby="comments-hint" required minlength="10" maxlength="1000"></textarea>
+            </div>
+
+            <input type="hidden" name="possible_bot" value="true">
+
+            <input type="hidden" id="form-errors-field" name="form-errors" value="">
+
+            <div>
+                <button type="submit">Send Message</button>
+            </div>
+
+            <section id="error-area" class="form-message error-message" aria-labelledby="error-title" hidden>
+                <h2 id="error-title" class="form-message-title">Errors to fix</h2>
+                <div aria-live="polite">
+                    <p id="no-errors" class="no-errors">No errors right now.</p>
+                    <p id="name-error" class="field-error" hidden></p>
+                    <p id="email-error" class="field-error" hidden></p>
+                    <p id="comments-error" class="field-error" hidden></p>
+                </div>
+            </section>
+
+            <section id="info-area" class="form-message info-message" aria-labelledby="info-title" data-state="ok" hidden>
+                <h2 id="info-title" class="form-message-title">Comments length</h2>
+                <p id="char-count">1,000 of 1,000 characters remaining.</p>
+                <p id="char-warning" class="char-warning" aria-live="polite"></p>
+            </section>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Katie Ngo.</p>
+        <p><a href="index.html">Back to home</a></p>
+    </footer>
+</body>
+</html>
