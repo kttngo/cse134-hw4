@@ -387,8 +387,19 @@ nav a[aria-current="page"] {
   background-color: var(--color-limit-bg);
 }
 
-.info-message[data-state="limit"] #char-count {
+
+#char-count[data-state="warning"],
+#char-count[data-state="limit"] {
   font-weight: bold;
+  color: var(--color-warning-text);
+}
+
+#char-count[data-state="warning"]::before {
+  content: "\26A0  " / "";
+}
+
+#char-count[data-state="limit"]::before {
+  content: "\26D4  " / "";
 }
 
 .char-warning {

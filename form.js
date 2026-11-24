@@ -11,7 +11,7 @@ const noErr = document.getElementById("no-errors");
 const charCount = document.getElementById("char-count");
 const charWarn = document.getElementById("char-warning");
 const info = document.getElementById("info-area");
-const history = document.getElementById("form-errors-field");
+const historyInput = document.getElementById("form-errors-field");
 
 const fields = [nameField, userEmail, commentsField];
 
@@ -108,18 +108,21 @@ function updateCount() {
   const max = commentsField.maxLength;
   const remaining = Math.max(0, max - commentsField.value.length);
 
-  charCount.textContent = `${formatNumber(remaining)} of ${formatNumber(max)} characters remaining.`;
-
   let state = "ok";
   let warning = "";
+  let countText = `${formatNumber(remaining)} of ${formatNumber(max)} characters remaining.`;
   if (remaining === 0) {
     state = "limit";
+    countText = `Limit reached: 0 of ${formatNumber(max)} characters remaining.`;
     warning = `You've reached the ${formatNumber(max)}-character limit. You can no longer type, but you can send your current message.`;
   } else if (remaining <= ALMOST_AT_LIM) {
     state = "warning";
+    countText = `Warning: only ${formatNumber(remaining)} of ${formatNumber(max)} characters remaining.`;
     warning = `Almost at the limit: ${formatNumber(ALMOST_AT_LIM)} or fewer characters left.`;
   }
 
+  charCount.textContent = countText;
+  charCount.dataset.state = state;
   info.dataset.state = state;
   if (charWarn.textContent !== warning) {
     charWarn.textContent = warning;
@@ -177,14 +180,14 @@ form.addEventListener(
     }
     const error = checkField(field);
     visibleErrorFields.add(field);
-    renderError(field, error);
+    showErr(field, error);
     recordError(field, error);
   },
   true
 );
 
 form.addEventListener("submit", () => {
-  history.value = JSON.stringify(form_errors);
+  historyInput.value = JSON.stringify(form_errors);
 });
 
 errorArea.hidden = false;
